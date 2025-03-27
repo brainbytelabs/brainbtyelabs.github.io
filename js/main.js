@@ -9,6 +9,23 @@ document.addEventListener('DOMContentLoaded', function() {
         navMenu.classList.toggle('active');
     });
     
+    // Add keyboard support for hamburger menu
+    if (hamburger) {
+        hamburger.setAttribute('tabindex', '0');
+        hamburger.setAttribute('role', 'button');
+        hamburger.setAttribute('aria-label', 'Menu');
+        hamburger.setAttribute('aria-expanded', 'false');
+        
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                hamburger.click();
+                const expanded = hamburger.classList.contains('active');
+                hamburger.setAttribute('aria-expanded', expanded);
+            }
+        });
+    }
+
     // Close mobile menu when clicking on a nav link
     document.querySelectorAll('.nav-menu a').forEach(navLink => {
         navLink.addEventListener('click', () => {
@@ -101,7 +118,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // Auto-rotate testimonials every 5 seconds
         setInterval(nextSlide, 5000);
     }
-    
+
+    // Add keyboard support for carousel controls
+    const controls = document.querySelectorAll('.control');
+    controls.forEach(control => {
+        control.setAttribute('tabindex', '0');
+        control.setAttribute('role', 'button');
+        control.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                control.click();
+            }
+        });
+    });
+
     // Form Validation and Submission
     const contactForm = document.getElementById('contactForm');
     
@@ -200,4 +230,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // Run animation function on scroll and on load
     window.addEventListener('scroll', animateOnScroll);
     window.addEventListener('load', animateOnScroll);
+
+    // Lazy loading images
+    const lazyImages = document.querySelectorAll('img[data-src]');
+    
+    const imageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                img.src = img.dataset.src;
+                img.classList.add('loaded');
+                observer.unobserve(img);
+            }
+        });
+    });
+    
+    lazyImages.forEach(img => imageObserver.observe(img));
 });

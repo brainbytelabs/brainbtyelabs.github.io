@@ -1,0 +1,123 @@
+/* Case Studies Styling */
+
+.case-study-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.case-study-header {
+  background: linear-gradient(135deg, #2b5876, #4e4376);
+  color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.case-study-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: -0.5px;
+}
+
+.tech-badge {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  background: rgba(255,255,255,0.15);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.flow-diagram {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* Ensure mermaid diagrams are properly sized */
+.mermaid {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.metrics-container {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.metrics-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.metrics-table th,
+.metrics-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #eee;
+  text-align: left;
+}
+
+.metrics-table th {
+  background: #f5f7fa;
+  font-weight: 600;
+}
+
+/* Highlight positive improvements */
+.improvement-positive {
+  color: #10b981;
+  font-weight: 600;
+}
+
+.code-example {
+  background: #1e1e3f;
+  color: #9efeff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  overflow-x: auto;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 2rem 0;
+}
+
+.results-section {
+  background: linear-gradient(135deg, #f6f9fc, #eef2f7);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.results-card {
+  background: white;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .case-study-header {
+    padding: 1.5rem 1rem;
+  }
+  
+  .case-study-header h1 {
+    font-size: 2rem;
+  }
+  
+  .flow-diagram {
+    padding: 1rem;
+  }
+}

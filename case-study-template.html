@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Case Study: Project Name - BrainByteLabs</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/case-studies.css">
+    <!-- Import Inter font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <!-- Import Fira Code for code blocks -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap">
+    <!-- Import Mermaid for flowcharts -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            mermaid.initialize({
+                startOnLoad: true,
+                theme: 'neutral',
+                flowchart: {
+                    useMaxWidth: true,
+                    htmlLabels: true,
+                    curve: 'basis'
+                },
+                securityLevel: 'loose'
+            });
+        });
+    </script>
+</head>
+<body>
+    <!-- Include your site header here -->
+    
+    <div class="case-study-container">
+        <section class="case-study-header">
+            <h1>Project Name: Technical Solution</h1>
+            <div class="tech-stack-badges">
+                <span class="tech-badge">React</span>
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">GraphQL</span>
+                <span class="tech-badge">AWS</span>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Business Challenge</h2>
+            <p>Technical description of the business challenge...</p>
+        </section>
+        
+        <section>
+            <h2>Solution Architecture</h2>
+            <div class="flow-diagram">
+                <div class="mermaid">
+                    flowchart TD
+                        A[Client Entry Point] --> B{Authentication}
+                        B -->|Success| C[API Gateway]
+                        B -->|Failure| D[Error Handler]
+                        C --> E[Microservice 1]
+                        C --> F[Microservice 2]
+                        E --> G[(Database)]
+                        F --> G
+                </div>
+            </div>
+            <p>Explanation of the architecture diagram...</p>
+        </section>
+        
+        <section>
+            <h2>Technical Implementation</h2>
+            <h3>Technology Stack</h3>
+            <div class="tech-stack-grid">
+                <!-- Technology stack details -->
+            </div>
+            
+            <h3>Key Technical Components</h3>
+            <div class="flow-diagram">
+                <div class="mermaid">
+                    graph LR
+                        A[Component 1] -- "REST API" --> B[Component 2]
+                        B -- "Async Events" --> C[Component 3]
+                        C -- "Data Stream" --> D[(Data Store)]
+                        D -- "Query" --> E[Analytics Engine]
+                </div>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Performance Metrics</h2>
+            <div class="metrics-container">
+                <table class="metrics-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Before</th>
+                            <th>After</th>
+                            <th>Improvement</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Response Time</td>
+                            <td>500ms</td>
+                            <td>120ms</td>
+                            <td class="improvement-positive">76%</td>
+                        </tr>
+                        <tr>
+                            <td>Throughput</td>
+                            <td>50 req/s</td>
+                            <td>250 req/s</td>
+                            <td class="improvement-positive">400%</td>
+                        </tr>
+                        <tr>
+                            <td>Error Rate</td>
+                            <td>4.2%</td>
+                            <td>0.3%</td>
+                            <td class="improvement-positive">93%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Technical Challenges & Solutions</h2>
+            <div class="flow-diagram">
+                <div class="mermaid">
+                    graph TD
+                        A[Challenge 1] --> B[Approach 1]
+                        A --> C[Approach 2]
+                        B --> D[Result: Pros/Cons]
+                        C --> E[Result: Pros/Cons]
+                        E --> F[Final Solution]
+                </div>
+            </div>
+            <p>Detailed explanation of the challenges and solutions...</p>
+        </section>
+        
+        <section>
+            <h2>Code Example</h2>
+            <pre class="code-example">
+// Sample implementation code highlighting a key solution
+function optimizedAlgorithm(data) {
+  // Technical implementation details
+  const processedData = data.filter(item => item.valid)
+    .map(item => transform(item))
+    .reduce((acc, val) => {
+      // Complex processing logic
+      return acc + val.score;
+    }, 0);
+    
+  return processedData;
+}
+            </pre>
+            <p>Explanation of the code implementation...</p>
+        </section>
+        
+        <section>
+            <h2>Deployment Strategy</h2>
+            <div class="flow-diagram">
+                <div class="mermaid">
+                    flowchart LR
+                        A[CI Pipeline] --> B[Automated Tests]
+                        B --> C{Pass?}
+                        C -->|Yes| D[Staging]
+                        C -->|No| E[Notify Team]
+                        D --> F[Integration Tests]
+                        F --> G{Pass?}
+                        G -->|Yes| H[Production]
+                        G -->|No| E
+                </div>
+            </div>
+            <p>Description of the deployment process...</p>
+        </section>
+        
+        <section class="results-section">
+            <h2>Results & Business Impact</h2>
+            <div class="results-card">
+                <h3>Technical Achievements</h3>
+                <p>Description of technical metrics achieved...</p>
+            </div>
+            <div class="results-card">
+                <h3>Business Value</h3>
+                <p>Description of business value delivered...</p>
+            </div>
+            <div class="results-card">
+                <h3>ROI Analysis</h3>
+                <p>Description of return on investment...</p>
+            </div>
+        </section>
+        
+        <section>
+            <h2>Lessons Learned</h2>
+            <ul>
+                <li><strong>Technical Insight 1:</strong> Description...</li>
+                <li><strong>Architecture Decision:</strong> Description...</li>
+                <li><strong>Future Improvements:</strong> Description...</li>
+            </ul>
+        </section>
+    </div>
+    
+    <!-- Include your site footer here -->
+</body>
+</html>
